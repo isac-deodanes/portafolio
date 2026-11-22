@@ -1,76 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 import { profile } from "../data/profile";
 
-const LINES = [
-  { prompt: "~$", text: "whoami" },
-  { prompt: ">", text: profile.name, isResult: true },
-  {
-    prompt: ">",
-    text: `${profile.role} — ${profile.roleLine}`,
-    isResult: true,
-  },
-  { prompt: "~$", text: "cat disponibilidad.txt" },
-  {
-    prompt: ">",
-    text: `Disponibilidad ${profile.availability.toLowerCase()} · ${profile.modality}`,
-    isResult: true,
-  },
-];
-
-function useTypedLines(lines) {
-  const [rendered, setRendered] = useState([]);
-  const [done, setDone] = useState(false);
-  const started = useRef(false);
-
-  useEffect(() => {
-    if (started.current) return;
-    started.current = true;
-
-    const reduceMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
-    if (reduceMotion) {
-      setRendered(lines.map((l) => l.text));
-      setDone(true);
-      return;
-    }
-
-    let lineIndex = 0;
-    let charIndex = 0;
-    let cancelled = false;
-    const next = [...lines.map(() => "")];
-
-    const tick = () => {
-      if (cancelled || lineIndex >= lines.length) {
-        setDone(true);
-        return;
-      }
-      const currentText = lines[lineIndex].text;
-      charIndex += 1;
-      next[lineIndex] = currentText.slice(0, charIndex);
-      setRendered([...next]);
-
-      if (charIndex >= currentText.length) {
-        lineIndex += 1;
-        charIndex = 0;
-        setTimeout(tick, 220);
-      } else {
-        setTimeout(tick, 18);
-      }
-    };
-
-    const startTimer = setTimeout(tick, 350);
-    return () => {
-      cancelled = true;
-      clearTimeout(startTimer);
-    };
-  }, [lines]);
-
-  return { rendered, done };
-}
-
 export default function Hero() {
-  const { rendered, done } = useTypedLines(LINES);
+  // const { rendered, done } = useTypedLines(LINES);
 
   return (
     <section
@@ -116,30 +48,28 @@ export default function Hero() {
             <span className="h-2.5 w-2.5 rounded-full bg-[#E8A33D]" />
             <span className="h-2.5 w-2.5 rounded-full bg-[#3FB8AF]" />
             <span className="ml-3 font-mono text-xs text-paper/40">
-              isac-deodanes:
+              Isaac Dagoberto Deodanes Benitez:
             </span>
           </div>
           <div className="min-h-[220px] px-5 py-5 font-mono text-[13px] leading-7 text-paper/85 sm:text-sm">
-            {LINES.map((line, i) => (
-              <div
-                key={i}
-                className={
-                  line.isResult ? "text-signal-bright" : "text-paper/90"
-                }
-              >
-                {rendered[i] ? (
-                  <>
-                    <span className="text-paper/40">{line.prompt} </span>
-                    {rendered[i]}
-                  </>
-                ) : (
-                  "\u00A0"
-                )}
-              </div>
-            ))}
-            {done && (
-              <span className="terminal-cursor inline-block h-4 w-2 translate-y-0.5 bg-signal-bright" />
-            )}
+            <div>
+              <p>~$ Rol</p>
+              <p className="text-[#60A5FA]">{profile.role}</p>
+              <br />
+              <p>~$ Disponibilidad</p>
+              <p className="text-[#60A5FA]">
+                {" "}
+                {profile.availability + " - " + profile.modality}
+              </p>
+              <br />
+              <p>~$ Idioma</p>
+              <p className="text-[#60A5FA]">
+                {profile.languages[0].name} - {profile.languages[0].level}
+              </p>
+              <p className="text-[#60A5FA]">
+                {profile.languages[1].name} - {profile.languages[1].level}
+              </p>
+            </div>
           </div>
         </div>
       </div>

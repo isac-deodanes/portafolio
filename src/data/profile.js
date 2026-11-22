@@ -1,6 +1,6 @@
 export const profile = {
   name: "Isaac Dagoberto Deodanes Benitez",
-  role: "Desarrollador Full Stack Jr",
+  role: "Desarrollador Web Full Stack Jr",
   roleLine: "Frontend & Backend",
   location: "San Salvador, El Salvador",
   email: "isacdeodanes@gmail.com",

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IoSunny, IoMoon } from "react-icons/io5";
 const links = [
   { href: "#sobre-mi", label: "Sobre mí" },
+  { href: "#experiencia", label: "Experiencia" },
   { href: "#habilidades", label: "Habilidades" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#certificaciones", label: "Certificaciones" },
