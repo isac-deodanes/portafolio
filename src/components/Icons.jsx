@@ -86,7 +86,12 @@ import {
   SiDocker,
 } from "react-icons/si";
 
-import { LuShieldCheck, LuSmartphone, LuServer, LuFileText } from "react-icons/lu";
+import {
+  LuShieldCheck,
+  LuSmartphone,
+  LuServer,
+  LuFileText,
+} from "react-icons/lu";
 
 // Componente reutilizable para los iconos tecnológicos
 const TechIcon = ({ icon: Icon, color, className = "", ...props }) => (
@@ -121,7 +126,9 @@ export const TailwindIcon = (props) => (
 export const SassIcon = (props) => (
   <TechIcon icon={SiSass} color="#CC6699" {...props} />
 );
-
+export const BootstrapIcon = (props) => (
+  <TechIcon icon={SiBootstrap} color="#CC6699" {...props} />
+);
 // BACKEND
 export const PhpIcon = (props) => (
   <TechIcon icon={SiPhp} color="#777BB4" {...props} />

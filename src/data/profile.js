@@ -39,7 +39,7 @@ export const certifications = [
     url: "https://platzi.com/p/isacdeodanes/curso/11059-course/diploma/detalle/",
   },
   {
-    name: "JavaScript-Manipulacion del DOM",
+    name: "JavaScript-Manipulación del DOM",
     issuer: "Platzi",
     status: "Certificado",
     url: "https://platzi.com/p/isacdeodanes/curso/10135-course/diploma/detalle/",
@@ -68,9 +68,8 @@ export const certifications = [
 export const references = [
   {
     name: "Isaac Dagoberto Deodanes Benitez",
-    edad: "23 años",
     telefono: "6857-4494",
-    domicilio: "Panchimalco, San Salvador, El Salvador",
+    domicilio: "San Salvador, El Salvador",
   },
   // { name: "Victor Fernando Polanco Escobar", role: "Asesor Técnico" },
   // {

@@ -57,10 +57,7 @@ export default function Hero() {
               <p className="text-[#60A5FA]">{profile.role}</p>
               <br />
               <p>~$ Disponibilidad</p>
-              <p className="text-[#60A5FA]">
-                {" "}
-                {profile.availability + " - " + profile.modality}
-              </p>
+              <p className="text-[#60A5FA]"> {profile.modality}</p>
               <br />
               <p>~$ Idioma</p>
               <p className="text-[#60A5FA]">

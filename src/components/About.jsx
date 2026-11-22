@@ -7,7 +7,7 @@ export default function About() {
       <div className="section-shell">
         <p className="kicker text-style">Sobre mí</p>
         <h2 className="mt-3 text-3xl text-ink dark:text-paper sm:text-4xl text-primary">
-          De la maqueta en Figma al endpoint en producción
+          De la maqueta en Figma al endpoint
         </h2>
 
         <div className="mt-10 grid gap-12 lg:grid-cols-[1.3fr_1fr]">

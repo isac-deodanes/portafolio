@@ -6,6 +6,7 @@ import {
   TypescriptIcon,
   TailwindIcon,
   SassIcon,
+  BootstrapIcon,
   PhpIcon,
   LaravelIcon,
   MiddlewareIcon,
@@ -34,6 +35,7 @@ export const skillGroups = [
       { icono: VueIcon, nombre: "Vue.js" },
       { icono: TailwindIcon, nombre: "Tailwind CSS" },
       { icono: SassIcon, nombre: "SCSS" },
+      { icono: BootstrapIcon, nombre: "Bootstrap" },
     ],
   },
   {
