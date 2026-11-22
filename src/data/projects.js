@@ -21,7 +21,7 @@ import {
 export const projects = [
   {
     id: "sistema-web-escolar",
-    image: ["/projects/portalEdu/img2.png"],
+    image: ["/projects/portalEdu/portal1.png"],
     name: "Sistema Web Escolar",
     status: "En desarrollo",
     type: "Proyecto individual",
