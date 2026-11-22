@@ -71,6 +71,7 @@ import {
   SiVuedotjs,
   SiTypescript,
   SiTailwindcss,
+  SiBootstrap,
   SiSass,
   SiPhp,
   SiLaravel,
