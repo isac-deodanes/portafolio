@@ -39,9 +39,9 @@ export const projects = [
     ],
     highlights: [
       "Modelado de datos con diagramas entidad-relación y de clases en draw.io antes de programar.",
-      "24 endpoints REST sobre 9 tablas, con controladores CRUD completos (index, show, store, update, destroy).",
+      "36 endpoints REST sobre 9 tablas, con controladores CRUD completos (index, show, store, update, destroy).",
       "Autenticación y control de acceso por roles mediante middleware y Laravel Sanctum.",
-      "15 vistas Blade repartidas entre los tres roles: profesores, alumnos, horarios, asignaturas, calificaciones y cargas académicas.",
+      "20 vistas Blade repartidas entre los tres roles: profesores, alumnos, horarios, asignaturas, calificaciones y cargas académicas.",
       "Contenerización con Docker Compose: API, frontend (Tailwind + Vite) y base de datos en contenedores independientes con Nginx.",
     ],
     repo: "https://github.com/isac-deodanes/Sistema-Web-Escolar",
@@ -111,7 +111,7 @@ export const projects = [
     ],
     highlights: [
       "Patrón MVC completo para gestión de productos, proveedores y empleados.",
-      "21 endpoints en total (7 rutas RESTful × 3 entidades).",
+      "15 endpoints en total (5 rutas RESTful × 3 entidades).",
       "Generación de reportes en PDF por entidad con Laravel DomPDF.",
       "Base de datos y migraciones en MySQL sobre Laragon/XAMPP.",
     ],
